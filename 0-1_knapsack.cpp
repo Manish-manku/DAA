@@ -3,11 +3,8 @@
 
 using namespace std;
 
-// Function to solve the 0-1 knapsack problem
 int knapsack(int W, const vector<int>& wt, const vector<int>& val, int n) {
     vector<vector<int>> K(n + 1, vector<int>(W + 1));
-
-    // Build table K[][] in bottom-up manner
     for (int i = 0; i <= n; i++) {
         for (int w = 0; w <= W; w++) {
             if (i == 0 || w == 0)
